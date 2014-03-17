@@ -1,0 +1,34 @@
+body {
+    background-color: #e0d9cf;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: .9em;
+}
+
+#content {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 10px solid #afa89f;
+    padding: 10px;
+}
+
+.try {
+    background-color: #965769;
+    color: #ffffff;
+    padding: 10px;
+    width: 70px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.try:hover {
+    background-color: #bc506f;
+}
+
+.usage {
+    margin: 20px 0;
+    background-color: #fafafa;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+}
