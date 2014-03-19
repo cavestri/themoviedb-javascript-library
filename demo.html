@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="main.css" />
         <script type="text/javascript" src="themoviedb.js"></script>
         <script type="application/javascript">
-            function succesCB(data) {
+            function successCB(data) {
                 console.log("Success: " + data);
             };
             
@@ -27,9 +27,9 @@
                         With this request you can get the current configuration of the API.
                     </p>
                     <div class="usage">
-                        theMovieDb.configurations.getConfiguration(succesCB, errorCB);
+                        theMovieDb.configurations.getConfiguration(successCB, errorCB);
                     </div>                
-                    <div class="try" onclick="theMovieDb.configurations.getConfiguration(succesCB, errorCB)">Try now!</div>
+                    <div class="try" onclick="theMovieDb.configurations.getConfiguration(successCB, errorCB)">Try now!</div>
                     <div class="result"></div>
                 </div>
             </div>
