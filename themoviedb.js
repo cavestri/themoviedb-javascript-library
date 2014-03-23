@@ -4,7 +4,7 @@ theMovieDb.common = {
     api_key: "",
     base_uri: "http://api.themoviedb.org/3/",
     images_uri: "http://image.tmdb.org/t/p/",
-    timeout: 2000,
+    timeout: 5000,
     query_options: [
         "page",
         "start_date",
@@ -62,25 +62,27 @@ theMovieDb.common = {
         xhr = new XMLHttpRequest();
         
         xhr.ontimeout = function () {
-            error("Timeout");
+            error('{"status_code":408,"status_message":"Request timed out"}');
         };
         
         xhr.open(method, theMovieDb.common.base_uri + options.url, true);
+        
+        xhr.timeout = theMovieDb.common.timeout;
         
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {
                 if (xhr.status === status) {
                     success(xhr.responseText);
                 } else {
-                    error(xhr.statusText);
+                    error(xhr.responseText);
                 }
             } else {
-                error(xhr.statusText);
+                error(xhr.responseText);
             }
         };
         
         xhr.onerror = function (e) {
-            error(JSON.stringify(xhr));
+            error(xhr.responseText);
         };
         if (options.method === "POST") {
             xhr.send(options.body);

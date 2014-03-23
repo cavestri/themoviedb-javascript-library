@@ -17,29 +17,29 @@ Currently the library supports all the methods of the API, anyway if you note th
 
 **Methods:**
 
-- Configuration
-- Account
-- Authentication
-- Certifications
-- Changes
-- Collections
-- Companies
-- Credits
-- Discover
-- Find
-- Genres
-- Jobs
-- Keywords
-- Lists
-- Movies
-- Networks
-- People
-- Reviews
-- Search
-- Timezones
-- TV
-- TV Seasons
-- TV Episodes
+- [Configuration](https://github.com/cavestri/themoviedb-javascript-library/wiki/Configuration)
+- [Account](https://github.com/cavestri/themoviedb-javascript-library/wiki/Account)
+- [Authentication](https://github.com/cavestri/themoviedb-javascript-library/wiki/Authentication)
+- [Certifications](https://github.com/cavestri/themoviedb-javascript-library/wiki/Certifications)
+- [Changes](https://github.com/cavestri/themoviedb-javascript-library/wiki/Changes)
+- [Collections](https://github.com/cavestri/themoviedb-javascript-library/wiki/Collections)
+- [Companies](https://github.com/cavestri/themoviedb-javascript-library/wiki/Companies)
+- [Credits](https://github.com/cavestri/themoviedb-javascript-library/wiki/Credits)
+- [Discover](https://github.com/cavestri/themoviedb-javascript-library/wiki/Discover)
+- [Find](https://github.com/cavestri/themoviedb-javascript-library/wiki/Find)
+- [Genres](https://github.com/cavestri/themoviedb-javascript-library/wiki/Genres)
+- [Jobs](https://github.com/cavestri/themoviedb-javascript-library/wiki/Jobs)
+- [Keywords](https://github.com/cavestri/themoviedb-javascript-library/wiki/Keywords)
+- [Lists](https://github.com/cavestri/themoviedb-javascript-library/wiki/Lists)
+- [Movies](https://github.com/cavestri/themoviedb-javascript-library/wiki/Movies)
+- [Networks](https://github.com/cavestri/themoviedb-javascript-library/wiki/Networks)
+- [People](https://github.com/cavestri/themoviedb-javascript-library/wiki/People)
+- [Reviews](https://github.com/cavestri/themoviedb-javascript-library/wiki/Reviews)
+- [Search](https://github.com/cavestri/themoviedb-javascript-library/wiki/Search)
+- [Timezones](https://github.com/cavestri/themoviedb-javascript-library/wiki/Timezones)
+- [TV](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV)
+- [TV Seasons](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV Seasons)
+- [TV Episodes](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV Episodes)
 
 Licence
 =======
