@@ -14,7 +14,7 @@ theMovieDb.common = {
         
         if (Object.keys(myOptions).length > 0) {
             for (option in myOptions) {
-                if (myOptions.hasOwnProperty(option) && option !== "id") {
+                if (myOptions.hasOwnProperty(option) && option !== "id" && option !== "body") {
                     query = query + "&" + option + "=" + myOptions[option];
                 }
             }
@@ -126,7 +126,7 @@ theMovieDb.account = {
             error
         );
     },
-    getList: function (options, success, error) {
+    getLists: function (options, success, error) {
         'use strict';
         
         theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id"]);
@@ -135,7 +135,7 @@ theMovieDb.account = {
         
         theMovieDb.common.client(
             {
-                url: "account" + options.id + "/lists" + theMovieDb.common.generateQuery(options)
+                url: "account/" + options.id + "/lists" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -150,7 +150,7 @@ theMovieDb.account = {
         
         theMovieDb.common.client(
             {
-                url: "account" + options.id + "/favorite_movies" + theMovieDb.common.generateQuery(options)
+                url: "account/" + options.id + "/favorite_movies" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -158,17 +158,26 @@ theMovieDb.account = {
     },
     addFavorite: function (options, success, error) {
         'use strict';
+        var body;
         
-        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id"]);
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id", "movie_id", "favorite"]);
         
         theMovieDb.common.validateCallbacks([success, error]);
         
+        body = {
+            "movie_id": options.movie_id, 
+            "favorite": options.favorite
+        }
+        
+        delete options.favorite;
+        delete options.movie_id;
+        
         theMovieDb.common.client(
             {
-                url: "account" + options.id + "/favorite" + theMovieDb.common.generateQuery(options),
+                url: "account/" + options.id + "/favorite" + theMovieDb.common.generateQuery(options),
                 status: 201,
                 method: "POST",
-                body: options.body
+                body: body
             },
             success,
             error
@@ -183,7 +192,7 @@ theMovieDb.account = {
         
         theMovieDb.common.client(
             {
-                url: "account" + options.id + "/rated_movies" + theMovieDb.common.generateQuery(options)
+                url: "account/" + options.id + "/rated_movies" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -198,7 +207,7 @@ theMovieDb.account = {
         
         theMovieDb.common.client(
             {
-                url: "account" + options.id + "/movie_watchlist" + theMovieDb.common.generateQuery(options)
+                url: "account/" + options.id + "/movie_watchlist" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -207,16 +216,26 @@ theMovieDb.account = {
     addMovieToWatchlist: function (options, success, error) {
         'use strict';
         
-        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id"]);
+        var body;
+        
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id", "movie_id", "movie_watchlist"]);
         
         theMovieDb.common.validateCallbacks([success, error]);
         
+        body = {
+            "movie_id": options.movie_id, 
+            "movie_watchlist": options.movie_watchlist
+        }
+        
+        delete options.favorite;
+        delete options.movie_id;
+        
         theMovieDb.common.client(
             {
-                url: "account" + options.id + "/movie_watchlist" + theMovieDb.common.generateQuery(options),
+                url: "account/" + options.id + "/movie_watchlist" + theMovieDb.common.generateQuery(options),
                 method: "POST",
                 status: 201,
-                body: options.body
+                body: body
             },
             success,
             error
@@ -240,14 +259,10 @@ theMovieDb.authentication = {
             error
         );
     },
-    askPermissions: function(options, success, error){
+    askPermissions: function(options){
        'use strict';
-        
-       theMovieDb.common.validateRequired(arguments, 3, options, ["token"]);
-       
-        theMovieDb.common.validateCallbacks([success, error]);
 
-        var win = window.open("https://www.themoviedb.org/authenticate/" + options.token);
+       window.open("https://www.themoviedb.org/authenticate/" + options.token + "?redirect_to=" + options.redirect_to);
         
     },
     validateUser: function (options, success, error) {
@@ -602,30 +617,52 @@ theMovieDb.lists = {
             error
         );
     },
-    addList: function (options, body, success, error) {
+    addList: function (options, success, error) {
         'use strict';
         
-        theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
+        var body;
+        
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "name", "description"]);
         
         theMovieDb.common.validateCallbacks([success, error]);
+        
+        body = {
+            "name": options.name,
+            "description": options.description
+        };
+        
+        delete options.name;
+        delete options.description;
+        
+        if(options.hasOwnProperty("language")) {
+            body["language"] = options.language;
+            
+            delete options.language;
+        }
         
         theMovieDb.common.client(
             {
                 method:  "POST",
                 status: 201,
-                url: "list/" + theMovieDb.common.generateQuery(options),
+                url: "list" + theMovieDb.common.generateQuery(options),
                 body: body
             },
             success,
             error
         );
     },
-    addItem: function (options, body, success, error) {
+    addItem: function (options, success, error) {
         'use strict';
         
-        theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
+        var body;
+        
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id", "media_id"]);
         
         theMovieDb.common.validateCallbacks([success, error]);
+        
+        body = {
+            "media_id": options.media_id
+        };
         
         theMovieDb.common.client(
             {
@@ -638,12 +675,18 @@ theMovieDb.lists = {
             error
         );
     },
-    removeItem: function (options, body, success, error) {
+    removeItem: function (options, success, error) {
         'use strict';
         
-        theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
+        var body;
+        
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id", "media_id"]);
         
         theMovieDb.common.validateCallbacks([success, error]);
+        
+        body = {
+            "media_id": options.media_id
+        };
         
         theMovieDb.common.client(
             {
@@ -659,7 +702,7 @@ theMovieDb.lists = {
     removeList: function (options, success, error) {
         'use strict';
 
-        theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id"]);
 
         theMovieDb.common.validateCallbacks([success, error]);
 
@@ -667,7 +710,7 @@ theMovieDb.lists = {
             {
                 method:  "DELETE",
                 status: 204,
-                url: "list/" + options.id + theMovieDb.common.generateQuery()
+                url: "list/" + options.id + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -676,7 +719,7 @@ theMovieDb.lists = {
     clearList: function (options, success, error) {
         'use strict';
 
-        theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id", "confirm"]);
+        theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id", "confirm"]);
 
         theMovieDb.common.validateCallbacks([success, error]);
 
@@ -685,7 +728,7 @@ theMovieDb.lists = {
                 method:  "POST",
                 status: 204,
                 body: {},
-                url: "list/" + options.id + "/clear" + theMovieDb.common.generateQuery()
+                url: "list/" + options.id + "/clear" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -964,7 +1007,7 @@ theMovieDb.movies = {
             error
         );
     },
-    rate: function (options, body, success, error) {
+    rate: function (options, rate, success, error) {
         'use strict';
         
         theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
@@ -976,13 +1019,13 @@ theMovieDb.movies = {
                 method:  "POST",
                 status: 201,
                 url: "movie/" + options.id + "/rating" + theMovieDb.common.generateQuery(options),
-                body: body
+                body: { "value": rate }
             },
             success,
             error
         );
     },
-    rateGuest: function (options, body, success, error) {
+    rateGuest: function (options, rate, success, error) {
         'use strict';
         
         theMovieDb.common.validateRequired(arguments, 4, options, ["guest_session_id", "id"]);
@@ -994,7 +1037,7 @@ theMovieDb.movies = {
                 method:  "POST",
                 status: 201,
                 url: "movie/" + options.id + "/rating" + theMovieDb.common.generateQuery(options),
-                body: body
+                body: { "value": rate }
             },
             success,
             error
