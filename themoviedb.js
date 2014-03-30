@@ -5,43 +5,6 @@ theMovieDb.common = {
     base_uri: "http://api.themoviedb.org/3/",
     images_uri: "http://image.tmdb.org/t/p/",
     timeout: 5000,
-    query_options: [
-        "append_to_response",
-        "certification_country",
-        "certification_lte",
-        "country",
-        "end_date",
-        "external_source",
-        "guest_session_id",
-        "favorite",
-        "first_air_date_gte",
-        "first_air_date_lte",
-        "first_air_date_year",
-        "id",
-        "include_adult",
-        "include_all_movies",
-        "include_image_language",
-        "language",
-        "page",
-        "primary_release_year",
-        "movie_id",
-        "movie_watchlist",
-        "release_date_gte",
-        "release_date_lte",
-        "request_token",
-        "search_type",
-        "session_id",
-        "sort_by",
-        "sort_order",
-        "start_date",
-        "timezone",
-        "vote_average_gte",
-        "vote_count_gte",
-        "with_companies",
-        "with_genres",
-        "with_networks",
-        "year"
-    ],
     generateQuery: function (options) {
         'use strict';
         var myOptions, query, option;
@@ -52,9 +15,7 @@ theMovieDb.common = {
         if (Object.keys(myOptions).length > 0) {
             for (option in myOptions) {
                 if (myOptions.hasOwnProperty(option) && option !== "id") {
-                    if (theMovieDb.common.query_options.indexOf(option) !== -1) {
-                        query = query + "&" + option + "=" + myOptions[option];
-                    }
+                    query = query + "&" + option + "=" + myOptions[option];
                 }
             }
         }
@@ -264,7 +225,7 @@ theMovieDb.account = {
 };
 
 theMovieDb.authentication = {
-    getToken: function (success, error) {
+    generateToken: function (success, error) {
         'use strict';
         
         theMovieDb.common.validateRequired(arguments, 2);
@@ -279,7 +240,32 @@ theMovieDb.authentication = {
             error
         );
     },
-    getSessionId: function (options, success, error) {
+    askPermissions: function(options, success, error){
+       'use strict';
+        
+       theMovieDb.common.validateRequired(arguments, 3, options, ["token"]);
+       
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        var win = window.open("https://www.themoviedb.org/authenticate/" + options.token);
+        
+    },
+    validateUser: function (options, success, error) {
+        'use strict';
+        
+        theMovieDb.common.validateRequired(arguments, 3, options, ["request_token", "username", "password"]);
+        
+        theMovieDb.common.validateCallbacks([success, error]);
+        
+        theMovieDb.common.client(
+            {
+                url: "authentication/token/new" + theMovieDb.common.generateQuery()
+            },
+            success,
+            error
+        );
+    },
+    generateSession: function (options, success, error) {
         'use strict';
                 
         theMovieDb.common.validateRequired(arguments, 3, options, ["request_token"]);
@@ -294,7 +280,7 @@ theMovieDb.authentication = {
             error
         );
     },
-    getGuestSession: function (success, error) {
+    generateGuestSession: function (success, error) {
         'use strict';
                 
         theMovieDb.common.validateRequired(arguments, 2);
@@ -1182,7 +1168,7 @@ theMovieDb.reviews = {
         
         theMovieDb.common.client(
             {
-                url: "review" + options.id + theMovieDb.common.generateQuery(options)
+                url: "review/" + options.id + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1533,7 +1519,7 @@ theMovieDb.tvEpisodes = {
             error
         );
     },
-    getEpisode: function (options, success, error) {
+    getCredits: function (options, success, error) {
         'use strict';
         
         theMovieDb.common.validateRequired(arguments, 3, options, ["episode_number", "season_number", "id"]);
