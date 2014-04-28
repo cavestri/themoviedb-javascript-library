@@ -169,8 +169,6 @@ theMovieDb.account = {
             "favorite": options.favorite
         }
         
-        delete options.favorite;
-        delete options.movie_id;
         
         theMovieDb.common.client(
             {
@@ -226,10 +224,7 @@ theMovieDb.account = {
             "movie_id": options.movie_id, 
             "movie_watchlist": options.movie_watchlist
         }
-        
-        delete options.favorite;
-        delete options.movie_id;
-        
+               
         theMovieDb.common.client(
             {
                 url: "account/" + options.id + "/movie_watchlist" + theMovieDb.common.generateQuery(options),
@@ -274,7 +269,7 @@ theMovieDb.authentication = {
         
         theMovieDb.common.client(
             {
-                url: "authentication/token/new" + theMovieDb.common.generateQuery()
+                url: "authentication/token/validate_with_login" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
