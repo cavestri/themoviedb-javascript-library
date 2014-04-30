@@ -66,6 +66,11 @@ theMovieDb.common = {
         };
         
         xhr.open(method, theMovieDb.common.base_uri + options.url, true);
+
+        if(options.method === "POST") {
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("Accept", "application/json");
+        }
         
         xhr.timeout = theMovieDb.common.timeout;
         
@@ -85,7 +90,7 @@ theMovieDb.common = {
             error(xhr.responseText);
         };
         if (options.method === "POST") {
-            xhr.send(options.body);
+            xhr.send(JSON.stringify(options.body));
         } else {
             xhr.send(null);
         }
