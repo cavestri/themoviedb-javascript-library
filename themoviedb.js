@@ -842,6 +842,21 @@ theMovieDb.movies = {
             error
         );
     },
+    getVideos: function (options, success, error) {
+        'use strict';
+        
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+        
+        theMovieDb.common.validateCallbacks([success, error]);
+        
+        theMovieDb.common.client(
+            {
+                url: "movie/" + options.id + "/videos" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
     getTranslations: function (options, success, error) {
         'use strict';
         
