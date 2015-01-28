@@ -441,7 +441,7 @@ theMovieDb.credits = {
         
         theMovieDb.common.client(
             {
-                url: "credit/" + options.id + theMovieDb.common.generateQuery(options)
+                url: "movie/" + options.id + "/credits" + theMovieDb.common.generateQuery(options) //Fixed TMDB-connection
             },
             success,
             error
@@ -1169,6 +1169,21 @@ theMovieDb.people = {
             error
         );
     },
+	getTaggedImages: function(options, sucess, error) {
+		'use strict';
+		
+		theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+        
+        theMovieDb.common.validateCallbacks([success, error]);
+		
+		 theMovieDb.common.client(
+            {
+                url: "person/" + options.id + "/tagged_images" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+	},
     getChanges: function (options, success, error) {
         'use strict';
         
@@ -1213,7 +1228,7 @@ theMovieDb.people = {
             success,
             error
         );
-    }
+    }	
 };
 
 theMovieDb.reviews = {
