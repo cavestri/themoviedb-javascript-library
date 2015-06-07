@@ -441,7 +441,7 @@ theMovieDb.credits = {
 
         theMovieDb.common.client(
             {
-                url: "credit/" + options.id + theMovieDb.common.generateQuery(options)
+                url: "movie/" + options.id + "/credits" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
