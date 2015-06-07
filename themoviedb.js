@@ -1,7 +1,7 @@
 var theMovieDb = {};
 
 theMovieDb.common = {
-    api_key: "",
+    api_key: "YOUR_KEY",
     base_uri: "http://api.themoviedb.org/3/",
     images_uri: "http://image.tmdb.org/t/p/",
     timeout: 5000,
@@ -1386,6 +1386,21 @@ theMovieDb.tv = {
         theMovieDb.common.client(
             {
                 url: "tv/" + options.id + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getSimilar: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/similar" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
