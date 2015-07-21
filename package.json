@@ -1,0 +1,23 @@
+{
+  "name": "themoviedb-javascript-library",
+  "version": "1.0.0",
+  "description": "A Javascript library to interact with the RESTful API of themoviedb.org.",
+  "main": "themoviedb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavestri/themoviedb-javascript-library.git"
+  },
+  "keywords": [
+    "themoviedb",
+    "api"
+  ],
+  "author": "Franco Cavestri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cavestri/themoviedb-javascript-library/issues"
+  },
+  "homepage": "https://github.com/cavestri/themoviedb-javascript-library#readme"
+}
