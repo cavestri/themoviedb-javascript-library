@@ -43,6 +43,12 @@ Currently the library supports all the methods of the API, anyway if you note th
 - [TV Seasons](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV Seasons)
 - [TV Episodes](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV Episodes)
 
+Examples
+========
+Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Live](http://codenatic.com/projects/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
+
+If you use the library in a project, please tell me or update this section. Thanks!
+
 Licence
 =======
 
