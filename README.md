@@ -47,6 +47,9 @@ Examples
 ========
 Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Live](http://codenatic.com/projects/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
 
+
+Next Episodes (Service): [Home](http://van-der-noord.nl/whensmyshow) | [My TV Shows](http://myshows-trialandsuccess.rhcloud.com) | [Code](http://github.com/robinvandernoord/nextepisodes)
+
 If you use the library in a project, please tell me or update this section. Thanks!
 
 Licence
