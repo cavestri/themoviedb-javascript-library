@@ -1466,6 +1466,21 @@ theMovieDb.tv = {
             error
         );
     },
+    getVideos: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/videos" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
     getOnTheAir: function (options, success, error) {
         'use strict';
 
