@@ -50,6 +50,8 @@ Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-mo
 
 Next Episodes (Service): [Home](http://van-der-noord.nl/whensmyshow) | [My TV Shows](http://myshows-trialandsuccess.rhcloud.com) | [Code](http://github.com/robinvandernoord/nextepisodes)
 
+Popular Movies MovieDB (Service) [DEMO](http://abdulhannanali.github.io/moviedb-popular-moives) | [CODE](http://github.com/abdulhannanali/moviedb-popular-moives)
+
 If you use the library in a project, please tell me or update this section. Thanks!
 
 Licence
@@ -57,7 +59,7 @@ Licence
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Franco Cavestri
+Copyright (c) 2016 Franco Cavestri
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
