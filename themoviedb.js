@@ -1,3 +1,12 @@
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 Franco Cavestri
+ *
+ * https://github.com/cavestri/themoviedb-javascript-library
+ *
+ */
+
 var theMovieDb = {};
 
 theMovieDb.common = {

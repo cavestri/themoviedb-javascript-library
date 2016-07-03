@@ -1,7 +1,7 @@
 The Movie DB (javascript library)
 =================================
 
-![TMDB Javascript](http://codenatic.com/blog/wp-content/uploads/2015/01/tmdb-766x510.jpg "Good movie!")
+![TMDB Javascript](http://codenatic.com/wp-content/uploads/2016/01/tmdb.jpg "Good movie!")
 
 A Javascript library to interact with the RESTful API of [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
 
