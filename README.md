@@ -1,8 +1,6 @@
 The Movie DB (javascript library)
 =================================
-[![Build Status](https://travis-ci.org/cavestri/themoviedb-javascript-library.svg?branch=master)](https://travis-ci.org/cavestri/themoviedb-javascript-library)
 [![NPM version](https://badge.fury.io/js/themoviedb-javascript-library.svg)](http://badge.fury.io/js/themoviedb-javascript-library)
-[![Dependency Status](https://img.shields.io/david/cavestri/themoviedb-javascript-library.svg)](https://david-dm.org/cavestri/themoviedb-javascript-library)
 [![npm](https://img.shields.io/npm/dm/themoviedb-javascript-library.svg?maxAge=2592000)]()
 
 ![TMDB Javascript](http://codenatic.com/wp-content/uploads/2016/01/tmdb.jpg "Good movie!")
