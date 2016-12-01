@@ -1178,7 +1178,7 @@ theMovieDb.people = {
             error
         );
     },
-	getTaggedImages: function(options, sucess, error) {
+	getTaggedImages: function(options, success, error) {
 		'use strict';
 
 		theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
