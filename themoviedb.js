@@ -520,7 +520,7 @@ theMovieDb.genres = {
 
         theMovieDb.common.client(
             {
-                url: "genre/list" + theMovieDb.common.generateQuery(options)
+                url: "genre/movie/list" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -540,7 +540,22 @@ theMovieDb.genres = {
             success,
             error
         );
-    }
+    },
+    getTVList: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, "", "", true);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "genre/tv/list" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    }	
 
 };
 
