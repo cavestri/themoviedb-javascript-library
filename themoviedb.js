@@ -1579,7 +1579,22 @@ theMovieDb.tv = {
             success,
             error
         );
-    }
+    },
+    getRecommendations: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/recommendations" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    }	
 };
 
 theMovieDb.tvSeasons = {
