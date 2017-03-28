@@ -42,17 +42,17 @@ Currently the library supports all the methods of the API, anyway if you note th
 - [Search](https://github.com/cavestri/themoviedb-javascript-library/wiki/Search)
 - [Timezones](https://github.com/cavestri/themoviedb-javascript-library/wiki/Timezones)
 - [TV](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV)
-- [TV Seasons](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV Seasons)
-- [TV Episodes](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV Episodes)
+- [TV Seasons](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV%20Seasons)
+- [TV Episodes](https://github.com/cavestri/themoviedb-javascript-library/wiki/TV%20Episodes)
 
 Examples
 ========
-Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Live](http://codenatic.com/projects/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
+Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Demo](http://codenatic.com/projects/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
 
 
 Next Episodes (Service): [Home](http://van-der-noord.nl/whensmyshow) | [My TV Shows](http://myshows-trialandsuccess.rhcloud.com) | [Code](http://github.com/robinvandernoord/nextepisodes)
 
-Popular Movies MovieDB (Service) [DEMO](http://abdulhannanali.github.io/moviedb-popular-moives) | [CODE](http://github.com/abdulhannanali/moviedb-popular-moives)
+Popular Movies MovieDB (Service) [Demo](http://abdulhannanali.github.io/moviedb-popular-moives) | [CODE](http://github.com/abdulhannanali/moviedb-popular-moives)
 
 If you use the library in a project, please tell me or update this section. Thanks!
 
