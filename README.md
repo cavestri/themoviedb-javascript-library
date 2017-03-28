@@ -9,6 +9,12 @@ A Javascript library to interact with the RESTful API of [themoviedb.org](http:/
 
 You will need an **api_key** to use the API, please get one at [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
 
+Installation
+============
+```bash
+npm install --save themoviedb-javascript-library
+```
+
 Usage
 =====
 
