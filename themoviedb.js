@@ -520,7 +520,7 @@ theMovieDb.genres = {
 
         theMovieDb.common.client(
             {
-                url: "genre/list" + theMovieDb.common.generateQuery(options)
+                url: "genre/movie/list" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -536,6 +536,21 @@ theMovieDb.genres = {
         theMovieDb.common.client(
             {
                 url: "genre/" + options.id + "/movies" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getTVList: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, "", "", true);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "genre/tv/list" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -876,6 +891,21 @@ theMovieDb.movies = {
         theMovieDb.common.client(
             {
                 url: "movie/" + options.id + "/translations" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getRecommendations: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "movie/" + options.id + "/recommendations" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1415,7 +1445,7 @@ theMovieDb.tv = {
             error
         );
     },
-    getSimilar: function (options, success, error) {
+    getAlternativeTitles: function (options, success, error) {
         'use strict';
 
         theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
@@ -1424,7 +1454,22 @@ theMovieDb.tv = {
 
         theMovieDb.common.client(
             {
-                url: "tv/" + options.id + "/similar" + theMovieDb.common.generateQuery(options)
+                url: "tv/" + options.id + "/alternative_titles" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getContentRatings: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/content_ratings" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1475,6 +1520,52 @@ theMovieDb.tv = {
             error
         );
     },
+    getKeywords: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/keywords" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error            
+        );
+
+    },
+    getRecommendations: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/recommendations" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },    
+    getSimilar: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/similar" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },    
     getTranslations: function (options, success, error) {
         'use strict';
 
@@ -1505,21 +1596,6 @@ theMovieDb.tv = {
             error
         );
     },
-    getOnTheAir: function (options, success, error) {
-        'use strict';
-
-        theMovieDb.common.validateRequired(arguments, 3, "", "", true);
-
-        theMovieDb.common.validateCallbacks([success, error]);
-
-        theMovieDb.common.client(
-            {
-                url: "tv/on_the_air" + theMovieDb.common.generateQuery(options)
-            },
-            success,
-            error
-        );
-    },
     getAiringToday: function (options, success, error) {
         'use strict';
 
@@ -1535,7 +1611,7 @@ theMovieDb.tv = {
             error
         );
     },
-    getTopRated: function (options, success, error) {
+    getLatest: function (options, success, error) {
         'use strict';
 
         theMovieDb.common.validateRequired(arguments, 3, "", "", true);
@@ -1544,7 +1620,22 @@ theMovieDb.tv = {
 
         theMovieDb.common.client(
             {
-                url: "tv/top_rated" + theMovieDb.common.generateQuery(options)
+                url: "tv/latest" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getOnTheAir: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, "", "", true);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/on_the_air" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1564,7 +1655,22 @@ theMovieDb.tv = {
             success,
             error
         );
-    }
+    },
+    getTopRated: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, "", "", true);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/top_rated" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    }    
 };
 
 theMovieDb.tvSeasons = {
@@ -1623,6 +1729,21 @@ theMovieDb.tvSeasons = {
         theMovieDb.common.client(
             {
                 url: "tv/" + options.id + "/season/" + options.season_number + "/images" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getVideos: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["season_number", "id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/season/" + options.season_number + "/videos" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1686,6 +1807,21 @@ theMovieDb.tvEpisodes = {
         theMovieDb.common.client(
             {
                 url: "tv/" + options.id + "/season/" + options.season_number + "/episode/" + options.episode_number + "/images" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+    getVideos: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["episode_number", "season_number", "id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/season/" + options.season_number + "/episode/" + options.episode_number + "/videos" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
