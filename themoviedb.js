@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2016 Franco Cavestri
+ * Copyright (c) 2014 - 2017 Franco Cavestri
  *
  * https://github.com/cavestri/themoviedb-javascript-library
  *
@@ -450,7 +450,7 @@ theMovieDb.credits = {
 
         theMovieDb.common.client(
             {
-                url: "credit/" + options.id + theMovieDb.common.generateQuery(options)
+                url: "movie/" + options.id + "/credits" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
