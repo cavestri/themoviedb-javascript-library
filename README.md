@@ -1,19 +1,11 @@
 The Movie DB (javascript library)
 =================================
-[![NPM version](https://badge.fury.io/js/themoviedb-javascript-library.svg)](http://badge.fury.io/js/themoviedb-javascript-library)
-[![npm](https://img.shields.io/npm/dm/themoviedb-javascript-library.svg?maxAge=2592000)]()
 
 ![TMDB Javascript](http://codenatic.com/wp-content/uploads/2016/01/tmdb.jpg "Good movie!")
 
 A Javascript library to interact with the RESTful API of [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
 
 You will need an **api_key** to use the API, please get one at [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
-
-Installation
-============
-```bash
-npm install --save themoviedb-javascript-library
-```
 
 Usage
 =====
