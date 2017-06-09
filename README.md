@@ -1,7 +1,7 @@
 The Movie DB (javascript library)
 =================================
 
-![TMDB Javascript](http://codenatic.com/wp-content/uploads/2016/01/tmdb.jpg "Good movie!")
+![TMDB Javascript](https://github.com/cavestri/themoviedb-javascript-library/blob/master/Muybridge_race_horse_animated.gif "First  movie!")
 
 A Javascript library to interact with the RESTful API of [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
 
