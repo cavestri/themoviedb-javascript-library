@@ -10,7 +10,7 @@ You will need an **api_key** to use the API, please get one at [themoviedb.org](
 Usage
 =====
 
-Please refer to the [wiki](https://github.com/cavestri/themoviedb-javascript-library/wiki "See the wiki!") for usage examples and descriptions, i haven't added any comment to the library to make it smaller. (You can download the minified version too)
+Please refer to the [wiki](https://github.com/cavestri/themoviedb-javascript-library/wiki "See the wiki!") for usage examples and descriptions, i haven't added any comment to the library to make it smaller.
 
 Methods supported
 =============
