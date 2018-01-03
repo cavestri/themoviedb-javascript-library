@@ -45,10 +45,7 @@ Currently the library supports all the methods of the API, anyway if you note th
 
 Examples
 ========
-Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Demo](http://codenatic.com/projects/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
-
-
-Next Episodes (Service): [Home](http://van-der-noord.nl/whensmyshow) | [My TV Shows](http://myshows-trialandsuccess.rhcloud.com) | [Code](http://github.com/robinvandernoord/nextepisodes)
+Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Demo](http://codenatic.com/demos/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
 
 Popular Movies MovieDB (Service) [Demo](http://abdulhannanali.github.io/moviedb-popular-moives) | [CODE](http://github.com/abdulhannanali/moviedb-popular-moives)
 
