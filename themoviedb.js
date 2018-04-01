@@ -355,7 +355,7 @@ theMovieDb.changes = {
             error
         );
     },
-    getPersonChanges: function (options, success, error) {
+	getPersonChanges: function (options, success, error) {
         'use strict';
 
         theMovieDb.common.validateRequired(arguments, 3, "", "", true);
@@ -365,6 +365,21 @@ theMovieDb.changes = {
         theMovieDb.common.client(
             {
                 url: "person/changes" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+	getTvChanges: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, "", "", true);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/changes" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1670,7 +1685,23 @@ theMovieDb.tv = {
             success,
             error
         );
-    }    
+    },
+	getChanges: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/" + options.id + "/changes" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    }
+
 };
 
 theMovieDb.tvSeasons = {
@@ -1744,6 +1775,21 @@ theMovieDb.tvSeasons = {
         theMovieDb.common.client(
             {
                 url: "tv/" + options.id + "/season/" + options.season_number + "/videos" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+	getChanges: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/season/" + options.id + "/changes" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
@@ -1822,6 +1868,21 @@ theMovieDb.tvEpisodes = {
         theMovieDb.common.client(
             {
                 url: "tv/" + options.id + "/season/" + options.season_number + "/episode/" + options.episode_number + "/videos" + theMovieDb.common.generateQuery(options)
+            },
+            success,
+            error
+        );
+    },
+	getChanges: function (options, success, error) {
+        'use strict';
+
+        theMovieDb.common.validateRequired(arguments, 3, options, ["id"]);
+
+        theMovieDb.common.validateCallbacks([success, error]);
+
+        theMovieDb.common.client(
+            {
+                url: "tv/episode/" + options.id + "/changes" + theMovieDb.common.generateQuery(options)
             },
             success,
             error
