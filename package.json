@@ -1,8 +1,8 @@
 {
   "name": "themoviedb-javascript-library",
-  "version": "1.0.1",
+  "version": "3.0.0",
   "description": "A Javascript library to interact with themoviedb.org Rest API.",
-  "filename": "themoviedb.min.js",
+  "filename": "themoviedb.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/cavestri/themoviedb-javascript-library.git"
@@ -13,5 +13,5 @@
   ],
   "author": "Franco Cavestri",
   "license": "MIT",
-  "homepage": "http://codenatic.com/2016/01/29/a-javascript-library-for-the-themoviedb-api/"
+  "homepage": "https://github.com/cavestri/themoviedb-javascript-library"
 }
