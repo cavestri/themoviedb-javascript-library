@@ -1,0 +1,104 @@
+3.0.0: Don't be lazy
+
+Library version has been updated to match API version, some methods and options have changed, keep it in mind before update your library.
+
+Added:
+  # configurations:
+    getCountries
+    getJobs
+    getLanguages
+    getPrimaryTranslations
+    getTimezones
+
+  # account:
+    getFavoritesTvShows
+    getRatedTvShows
+    getRatedTvEpisodes
+    getTvShowsWatchlist
+
+  # certifications:
+    getTvList
+
+  # collections:
+    getTranslations
+
+  # companies:
+    getAlternativeNames
+
+  # guestSession:
+    getRatedMovies
+    getRatedTvShows
+    getRatedTvEpisodes
+
+  # movies:
+    getExternalIds
+    removeRate
+    removeRateGuest
+    getAccountStatesGuest
+
+  # networks:
+    getAlternativeNames
+
+  # tv:
+    getAccountStates
+    getAccountStatesGuest
+    getReviews
+    getScreenedTheatrically
+    rate
+    rateGuest
+    removeRate
+    removeRateGuest
+
+  # tvSeasons
+    getAccountStates
+    getAccountStatesGuest
+
+  # tvEpisodes
+    getAccountStates
+    getAccountStatesGuest
+    rate
+    rateGuest
+    removeRate
+    removeRateGuest
+
+Renamed:
+
+  # account:
+    getWatchlist -> getMovieWatchlist
+    addMovieToWatchlist -> addToWatchlist
+
+  # certifications:
+    getList -> getMovieList
+
+  # collections:
+    getCollection -> getDetails
+    getCollectionImages -> getImages
+
+  # companies:
+    getCompany -> getDetails
+
+  # credits:
+    getCredit -> getDetails
+
+  # genres:
+    getList -> getMovieList
+    getTVList -> getTvList
+
+  # movies:
+    getStatus -> getAccountStates
+
+Removed:
+  # companies:
+    getCompanyMovies
+
+  # jobs
+
+  # movies:
+    getTrailers
+
+  # search
+    getList
+
+  # timezones
+
+Some API query paths were updated.

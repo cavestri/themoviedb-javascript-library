@@ -5,7 +5,7 @@ The Movie DB (javascript library)
 
 A Javascript library to interact with the RESTful API of [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
 
-You will need an **api_key** to use the API, please get one at [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
+You will need an **api_key** to use the API, please get one at [themoviedb.org](https://www.themoviedb.org/documentation/api "Get TMDB api key").
 
 Usage
 =====
@@ -15,7 +15,7 @@ Please refer to the [wiki](https://github.com/cavestri/themoviedb-javascript-lib
 Methods supported
 =============
 
-Currently the library supports all the methods of the API, anyway if you note that the API was updated and not the library or you see some kind of error, please add an [issue](https://github.com/cavestri/themoviedb-javascript-library/issues "Add a bug") and i will fix it as soon as possible.
+The library should supports all the methods of the REST API, anyway if you note that the API was updated and the library not or you see some kind of error, please add an [issue](https://github.com/cavestri/themoviedb-javascript-library/issues "Add a bug") and i will fix it as soon as possible.
 
 **Methods:**
 
@@ -56,7 +56,7 @@ Licence
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2017 Franco Cavestri
+Copyright (c) Franco Cavestri
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
