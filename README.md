@@ -1,6 +1,8 @@
 The Movie DB (javascript library)
 =================================
 
+LAST RELEASE: 3.0.0 (See CHANGELOG file)
+
 ![TMDB Javascript](https://github.com/cavestri/themoviedb-javascript-library/blob/master/Muybridge_race_horse_animated.gif "First  movie!")
 
 A Javascript library to interact with the RESTful API of [themoviedb.org](http://www.themoviedb.org/ "The Movie DB").
@@ -10,7 +12,7 @@ You will need an **api_key** to use the API, please get one at [themoviedb.org](
 Usage
 =====
 
-Please refer to the [wiki](https://github.com/cavestri/themoviedb-javascript-library/wiki "See the wiki!") for usage examples and descriptions, i haven't added any comment to the library to make it smaller.
+Please refer to the [wiki](https://github.com/cavestri/themoviedb-javascript-library/wiki "See the wiki!") for usage examples and descriptions, i haven't added any comment to the library to make it smaller. (It's being updated)
 
 Methods supported
 =============
@@ -50,6 +52,11 @@ Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-mo
 Popular Movies MovieDB (Service) [Demo](http://abdulhannanali.github.io/moviedb-popular-moives) | [CODE](http://github.com/abdulhannanali/moviedb-popular-moives)
 
 If you use the library in a project, please tell me or update this section. Thanks!
+
+Changelog
+=========
+
+See CHANGELOG file for details.
 
 Licence
 =======
