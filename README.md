@@ -1,7 +1,7 @@
 The Movie DB (javascript library)
 =================================
 
-LAST RELEASE: 3.0.0 (See CHANGELOG file)
+LAST RELEASE: 3.0.1 (See CHANGELOG file)
 
 ![TMDB Javascript](https://github.com/cavestri/themoviedb-javascript-library/blob/master/Muybridge_race_horse_animated.gif "First  movie!")
 
@@ -14,7 +14,7 @@ Usage
 
 Please refer to the [wiki](https://github.com/cavestri/themoviedb-javascript-library/wiki "See the wiki!") for usage examples and descriptions, i haven't added any comment to the library to make it smaller. (It's being updated)
 
-Methods supported
+Methods supported (needs update)
 =============
 
 The library should supports all the methods of the REST API, anyway if you note that the API was updated and the library not or you see some kind of error, please add an [issue](https://github.com/cavestri/themoviedb-javascript-library/issues "Add a bug") and i will fix it as soon as possible.

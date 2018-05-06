@@ -1,3 +1,15 @@
+3.0.1: Global times
+
+Added language as global configuration, now you can set the returned language in one place.
+
+Added:
+  # common:
+    language (defaults to 'en-US')
+
+E.G.:
+
+  theMovieDb.common.language = "pt-BR"
+
 3.0.0: Don't be lazy
 
 Library version has been updated to match API version, some methods and options have changed, keep it in mind before update your library.
