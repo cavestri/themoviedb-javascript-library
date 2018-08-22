@@ -1,7 +1,7 @@
 The Movie DB (javascript library)
 =================================
 
-LAST RELEASE: 3.0.1 (See CHANGELOG file)
+LAST RELEASE: 3.0.3 (See CHANGELOG file)
 
 ![TMDB Javascript](https://github.com/cavestri/themoviedb-javascript-library/blob/master/Muybridge_race_horse_animated.gif "First  movie!")
 

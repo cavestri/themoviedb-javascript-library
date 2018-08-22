@@ -1,3 +1,26 @@
+3.0.3: Community
+
+Add export to allowing the require import usage and fix issues with some methods.
+
+Thanks  @jeffreyspaan / @afzaalopera
+
+Added:
+  # Exporter
+
+Updated:
+  # tv:
+      getLatest: options parameter removed
+      removeRate: rate parameter removed
+      removeRateGuest: rate parameter removed
+
+ # movies:
+    removeRate: rate parameter removed
+    removeRateGuest: rate parameter removed
+
+  #tvEpisodes:
+    removeRate: rate parameter removed
+    removeRateGuest: rate parameter removed
+
 3.0.1: Global times
 
 Added language as global configuration, now you can set the returned language in one place.

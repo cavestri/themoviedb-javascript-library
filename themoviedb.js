@@ -1255,10 +1255,10 @@ theMovieDb.movies = {
       error
     );
   },
-  removeRate: function(options, rate, success, error) {
+  removeRate: function(options, success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
+    theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id"]);
 
     theMovieDb.common.validateCallbacks(success, error);
 
@@ -1272,10 +1272,10 @@ theMovieDb.movies = {
       error
     );
   },
-  removeRateGuest: function(options, rate, success, error) {
+  removeRateGuest: function(options, success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 4, options, ["guest_session_id", "id"]);
+    theMovieDb.common.validateRequired(arguments, 3, options, ["guest_session_id", "id"]);
 
     theMovieDb.common.validateCallbacks(success, error);
 
@@ -1823,15 +1823,15 @@ theMovieDb.tv = {
       error
     );
   },
-  getLatest: function(options, success, error) {
+  getLatest: function(success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 3, "", "", true);
+    theMovieDb.common.validateRequired(arguments, 2, "", "", true);
 
     theMovieDb.common.validateCallbacks(success, error);
 
     theMovieDb.common.client({
-        url: "tv/latest" + theMovieDb.common.generateQuery(options)
+        url: "tv/latest" + theMovieDb.common.generateQuery()
       },
       success,
       error
@@ -1917,10 +1917,10 @@ theMovieDb.tv = {
       error
     );
   },
-  removeRate: function(options, rate, success, error) {
+  removeRate: function(options, success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 4, options, ["session_id", "id"]);
+    theMovieDb.common.validateRequired(arguments, 3, options, ["session_id", "id"]);
 
     theMovieDb.common.validateCallbacks(success, error);
 
@@ -1934,10 +1934,10 @@ theMovieDb.tv = {
       error
     );
   },
-  removeRateGuest: function(options, rate, success, error) {
+  removeRateGuest: function(options, success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 4, options, ["guest_session_id", "id"]);
+    theMovieDb.common.validateRequired(arguments, 3, options, ["guest_session_id", "id"]);
 
     theMovieDb.common.validateCallbacks(success, error);
 
@@ -2219,10 +2219,10 @@ theMovieDb.tvEpisodes = {
       error
     );
   },
-  removeRate: function(options, rate, success, error) {
+  removeRate: function(options, success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 4, options, ["episode_number", "season_number", "session_id", "id"]);
+    theMovieDb.common.validateRequired(arguments, 3, options, ["episode_number", "season_number", "session_id", "id"]);
 
     theMovieDb.common.validateCallbacks(success, error);
 
@@ -2235,10 +2235,10 @@ theMovieDb.tvEpisodes = {
       error
     );
   },
-  removeRateGuest: function(options, rate, success, error) {
+  removeRateGuest: function(options, success, error) {
     'use strict';
 
-    theMovieDb.common.validateRequired(arguments, 4, options, ["episode_number", "season_number", "guest_session_id", "id"]);
+    theMovieDb.common.validateRequired(arguments, 3, options, ["episode_number", "season_number", "guest_session_id", "id"]);
 
     theMovieDb.common.validateCallbacks(success, error);
 
@@ -2252,3 +2252,7 @@ theMovieDb.tvEpisodes = {
     );
   }
 };
+
+if ((typeof module != 'undefined') && (module.exports)) {
+	module.exports = theMovieDb;
+}
