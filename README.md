@@ -47,7 +47,6 @@ The library should supports all the methods of the REST API, anyway if you note 
 
 Examples
 ========
-Guess The Movie (Game): [Home](http://codenatic.com/blog/2015/02/18/guess-the-movie-game/) | [Demo](http://codenatic.com/demos/guessthemovie/) | [Code](https://github.com/cavestri/guessthemovie)
 
 Popular Movies MovieDB (Service) [Demo](http://abdulhannanali.github.io/moviedb-popular-moives) | [CODE](http://github.com/abdulhannanali/moviedb-popular-moives)
 
